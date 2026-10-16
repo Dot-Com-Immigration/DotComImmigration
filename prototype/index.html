@@ -1,0 +1,669 @@
+<title>Dot Com Immigration</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap">
+<style>
+/* Layout: dark authority band at top carrying a working deadline instrument,
+   cream editorial body beneath, navy compliance footer. Gold used once per band. */
+:root{
+  --bg:#FAF8F4; --surface:#FFFFFF; --surface-2:#F2EDE3;
+  --fg:#0B2240; --muted:#5A6B82; --line:#E4DCCD;
+  --navy:#0B2240; --navy-deep:#050F1C; --navy-soft:#15325A;
+  --gold:#C3953C; --gold-bright:#D4A94F; --gold-pale:#F0DBAC;
+  --on-navy:#F2EDE3; --on-navy-muted:#9DB0C7;
+  --alarm:#B4472F;
+  --display:"Marcellus",Georgia,"Times New Roman",serif;
+  --body:"Public Sans",ui-sans-serif,system-ui,-apple-system,sans-serif;
+  --maxw:1180px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#050F1C; --surface:#0B2240; --surface-2:#102847;
+  --fg:#F2EDE3; --muted:#9DB0C7; --line:#1C3356;
+  --on-navy:#F2EDE3; --on-navy-muted:#9DB0C7;
+  --gold:#D4A94F; --alarm:#E08264;
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#050F1C; --surface:#0B2240; --surface-2:#102847;
+  --fg:#F2EDE3; --muted:#9DB0C7; --line:#1C3356;
+  --on-navy:#F2EDE3; --on-navy-muted:#9DB0C7;
+  --gold:#D4A94F; --alarm:#E08264;
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.6;overflow-x:hidden}
+h1,h2,h3,h4{font-family:var(--display);font-weight:400;line-height:1.14;text-wrap:balance;margin:0}
+p{margin:0;text-wrap:pretty}
+a{color:inherit}
+img{max-width:100%;display:block}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:2px}
+
+.wrap{width:100%;max-width:var(--maxw);margin-inline:auto;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));}
+.band{padding-block:clamp(56px,7vw,104px)}
+.eyebrow{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--gold);margin:0 0 14px}
+.lede{font-size:clamp(1rem,1.6vw,1.15rem);color:var(--muted);max-width:62ch}
+
+/* ---------- verification strip ---------- */
+.verify-strip{background:var(--navy-deep);color:var(--on-navy-muted);font-size:.78rem;
+  border-bottom:1px solid rgba(195,149,60,.22)}
+.verify-strip .wrap{display:flex;gap:10px 22px;align-items:center;justify-content:center;
+  flex-wrap:wrap;padding-block:9px;text-align:center}
+.verify-strip b{color:var(--gold-bright);font-weight:600}
+.verify-strip a{color:var(--on-navy);text-underline-offset:3px}
+
+/* ---------- nav ---------- */
+header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:60;
+  background:color-mix(in oklab,var(--navy-deep) 92%,transparent);
+  backdrop-filter:blur(12px) saturate(150%);
+  border-bottom:1px solid rgba(242,237,227,.1)}
+header.nav .wrap{display:flex;align-items:center;gap:18px;padding-block:12px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;flex:0 0 auto}
+.brand img{height:46px;width:auto}
+.brand-txt{display:none;line-height:1.05}
+@media(min-width:560px){.brand-txt{display:block}}
+.brand-txt .n{font-family:var(--display);color:var(--on-navy);font-size:1.02rem;letter-spacing:.04em}
+.brand-txt .t{font-size:.63rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-bright)}
+nav.links{margin-left:auto;display:none;gap:26px;align-items:center}
+@media(min-width:1000px){nav.links{display:flex}}
+nav.links a{color:var(--on-navy-muted);text-decoration:none;font-size:.86rem;font-weight:500;
+  position:relative;padding-block:4px;transition:color .18s}
+nav.links a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;
+  background:var(--gold-bright);transition:right .3s cubic-bezier(.22,1,.36,1)}
+nav.links a:hover{color:var(--on-navy)}
+nav.links a:hover::after{right:0}
+.nav-cta{margin-left:auto;display:flex;gap:10px;align-items:center}
+@media(min-width:1000px){.nav-cta{margin-left:0}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;cursor:pointer;
+  font-family:var(--body);font-size:.88rem;font-weight:600;letter-spacing:.01em;
+  padding:12px 22px;border-radius:2px;text-decoration:none;transition:transform .16s,box-shadow .2s,background .2s}
+.btn-gold{background:linear-gradient(135deg,var(--gold-bright),var(--gold));color:#2A1D05;
+  box-shadow:0 1px 0 rgba(255,255,255,.3) inset,0 6px 18px -8px rgba(195,149,60,.8)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 1px 0 rgba(255,255,255,.35) inset,0 12px 26px -10px rgba(195,149,60,.9)}
+.btn-ghost{background:transparent;color:var(--on-navy);border:1px solid rgba(242,237,227,.3)}
+.btn-ghost:hover{border-color:var(--gold-bright);color:var(--gold-bright)}
+.btn-navy{background:var(--navy);color:var(--on-navy)}
+.btn-navy:hover{transform:translateY(-2px)}
+.btn-sm{padding:9px 16px;font-size:.8rem}
+
+/* ---------- hero ---------- */
+.hero{position:relative;background:var(--navy-deep);color:var(--on-navy);overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(44rem 30rem at 8% -12%,rgba(195,149,60,.20),transparent 62%),
+    radial-gradient(40rem 30rem at 95% 0%,rgba(28,65,118,.60),transparent 60%),
+    radial-gradient(36rem 26rem at 60% 112%,rgba(195,149,60,.10),transparent 62%)}
+.hero::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.04;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E")}
+.hero .wrap{position:relative;z-index:2;display:grid;gap:clamp(34px,4.5vw,60px);
+  padding-block:clamp(50px,6.5vw,88px);grid-template-columns:1fr}
+@media(min-width:980px){.hero .wrap{grid-template-columns:1.04fr .96fr;align-items:center}}
+.hero h1{font-size:clamp(2.3rem,5.4vw,4.1rem);color:var(--on-navy);margin-bottom:20px}
+.hero h1 em{font-style:normal;display:block;
+  background:linear-gradient(135deg,#F0DBAC 0%,#D4A94F 42%,#A87C2C 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.sub{color:var(--on-navy-muted);font-size:clamp(1rem,1.5vw,1.14rem);max-width:54ch;margin-bottom:26px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:26px}
+.hero-trust{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:.78rem;color:var(--on-navy-muted)}
+.hero-trust span{display:inline-flex;align-items:center;gap:7px}
+.tick{width:15px;height:15px;flex:0 0 auto;color:var(--gold-bright)}
+
+/* ---------- deadline instrument ---------- */
+.clock{background:linear-gradient(170deg,rgba(242,237,227,.1),rgba(242,237,227,.03));
+  border:1px solid rgba(195,149,60,.34);border-radius:4px;padding:clamp(20px,2.4vw,30px);
+  box-shadow:0 30px 70px -36px rgba(0,0,0,.9)}
+.clock h2{font-size:1.16rem;color:var(--on-navy);margin-bottom:5px}
+.clock .hint{font-size:.78rem;color:var(--on-navy-muted);margin-bottom:18px}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;
+  font-weight:600;color:var(--gold-bright);margin-bottom:7px}
+.field select,.field input{width:100%;padding:12px 13px;border-radius:2px;font-family:var(--body);font-size:.92rem;
+  background:rgba(5,15,28,.6);color:var(--on-navy);border:1px solid rgba(242,237,227,.22)}
+.field select:focus,.field input:focus{border-color:var(--gold-bright);outline:none}
+.readout{margin-top:18px;border-top:1px solid rgba(195,149,60,.3);padding-top:18px}
+.digits{display:flex;gap:8px;margin-bottom:12px}
+.dcell{flex:1;background:rgba(5,15,28,.66);border:1px solid rgba(195,149,60,.26);border-radius:3px;
+  padding:11px 6px;text-align:center}
+.dcell .v{font-family:var(--display);font-size:clamp(1.6rem,4.2vw,2.1rem);line-height:1;
+  color:var(--gold-bright);font-variant-numeric:tabular-nums}
+.dcell .k{font-size:.58rem;letter-spacing:.17em;text-transform:uppercase;color:var(--on-navy-muted);margin-top:6px}
+.verdict{font-size:.88rem;color:var(--on-navy);margin-bottom:6px}
+.verdict strong{color:var(--gold-bright)}
+.verdict.past strong{color:var(--alarm)}
+.cite{font-size:.71rem;color:var(--on-navy-muted);line-height:1.5}
+.cite a{color:var(--gold-bright);text-underline-offset:2px}
+
+/* ---------- stats ---------- */
+.stats{background:var(--navy);color:var(--on-navy);border-block:1px solid rgba(195,149,60,.22)}
+.stats .wrap{display:grid;gap:26px;padding-block:clamp(36px,4vw,52px);
+  grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(min-width:860px){.stats .wrap{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.stat .v{font-family:var(--display);font-size:clamp(1.8rem,3.6vw,2.6rem);color:var(--gold-bright);
+  line-height:1;font-variant-numeric:tabular-nums}
+.stat .k{font-size:.8rem;color:var(--on-navy-muted);margin-top:9px;line-height:1.45}
+
+/* ---------- cards ---------- */
+.grid{display:grid;gap:18px;grid-template-columns:1fr}
+@media(min-width:680px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:1000px){.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:3px;padding:24px;
+  min-width:0;display:flex;flex-direction:column;gap:11px;
+  transition:transform .22s cubic-bezier(.22,1,.36,1),box-shadow .22s,border-color .22s}
+.card:hover{transform:translateY(-4px);border-color:var(--gold);
+  box-shadow:0 20px 42px -26px rgba(11,34,64,.5)}
+.card .doc{font-size:.63rem;letter-spacing:.17em;text-transform:uppercase;font-weight:700;color:var(--gold)}
+.card h3{font-size:1.18rem}
+.card p{font-size:.9rem;color:var(--muted)}
+.card .clockline{margin-top:auto;padding-top:12px;border-top:1px dashed var(--line);
+  font-size:.79rem;font-weight:600;color:var(--fg);display:flex;align-items:center;gap:8px}
+.card .clockline b{color:var(--alarm);font-variant-numeric:tabular-nums}
+
+/* ---------- problems ---------- */
+.pslist{display:grid;gap:14px}
+.ps{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--gold);
+  border-radius:3px;overflow:hidden}
+.ps summary{cursor:pointer;list-style:none;padding:18px 22px;display:flex;gap:14px;align-items:flex-start;
+  font-weight:600;font-size:1rem}
+.ps summary::-webkit-details-marker{display:none}
+.ps summary .num{font-family:var(--display);color:var(--gold);font-size:.95rem;flex:0 0 auto;
+  font-variant-numeric:tabular-nums}
+.ps summary .chev{margin-left:auto;flex:0 0 auto;transition:transform .25s;color:var(--muted)}
+.ps[open] summary .chev{transform:rotate(180deg)}
+.ps .body{padding:0 22px 20px 22px;display:grid;gap:14px}
+@media(min-width:760px){.ps .body{grid-template-columns:1fr 1fr;gap:22px}}
+.ps .body h4{font-size:.68rem;letter-spacing:.17em;text-transform:uppercase;color:var(--gold);
+  font-family:var(--body);font-weight:700;margin-bottom:7px}
+.ps .body p{font-size:.9rem;color:var(--muted)}
+
+/* ---------- verify ---------- */
+.verify{background:var(--navy-deep);color:var(--on-navy);position:relative;overflow:hidden}
+.verify::before{content:"";position:absolute;inset:0;
+  background:radial-gradient(46rem 30rem at 82% 50%,rgba(195,149,60,.17),transparent 62%)}
+.verify .wrap{position:relative;z-index:2;display:grid;gap:34px}
+@media(min-width:900px){.verify .wrap{grid-template-columns:1fr 1fr;align-items:center}}
+.verify h2{font-size:clamp(1.8rem,3.4vw,2.7rem);color:var(--on-navy);margin-bottom:16px}
+.verify p{color:var(--on-navy-muted);margin-bottom:14px;font-size:.96rem}
+.steps{display:grid;gap:12px;counter-reset:s}
+.step{display:flex;gap:14px;align-items:flex-start;background:rgba(242,237,227,.05);
+  border:1px solid rgba(242,237,227,.13);border-radius:3px;padding:15px 17px}
+.step .n{counter-increment:s;font-family:var(--display);color:var(--gold-bright);font-size:1.05rem;flex:0 0 auto}
+.step .n::before{content:counter(s,decimal-leading-zero)}
+.step p{margin:0;font-size:.87rem;color:var(--on-navy-muted)}
+.step b{color:var(--on-navy)}
+
+/* ---------- about ---------- */
+.about .wrap{display:grid;gap:clamp(28px,4vw,52px)}
+@media(min-width:880px){.about .wrap{grid-template-columns:.8fr 1.2fr;align-items:center}}
+.portrait{position:relative;border-radius:3px;overflow:hidden;background:var(--navy-deep);
+  border:1px solid var(--line)}
+.portrait img{width:100%;height:auto;mix-blend-mode:normal}
+.portrait figcaption{position:absolute;left:0;right:0;bottom:0;padding:16px 18px;
+  background:linear-gradient(to top,rgba(5,15,28,.95),transparent);color:var(--on-navy)}
+.portrait figcaption .nm{font-family:var(--display);font-size:1.1rem}
+.portrait figcaption .cr{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold-bright)}
+
+/* ---------- form ---------- */
+.formwrap{background:var(--surface);border:1px solid var(--line);border-radius:4px;
+  padding:clamp(22px,3vw,34px)}
+.frow{display:grid;gap:14px;grid-template-columns:1fr}
+@media(min-width:640px){.frow.two{grid-template-columns:1fr 1fr}}
+.f label{display:block;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;
+  color:var(--fg);margin-bottom:6px}
+.f label .req{color:var(--alarm)}
+.f input,.f select,.f textarea{width:100%;padding:11px 13px;border-radius:2px;
+  border:1px solid var(--line);background:var(--bg);color:var(--fg);
+  font-family:var(--body);font-size:.93rem}
+.f textarea{min-height:110px;resize:vertical}
+.f input:focus,.f select:focus,.f textarea:focus{border-color:var(--gold);outline:none}
+.f .help{font-size:.74rem;color:var(--muted);margin-top:5px}
+.radios{display:grid;gap:9px}
+@media(min-width:640px){.radios{grid-template-columns:1fr 1fr}}
+.radio{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--line);border-radius:2px;
+  padding:11px 13px;cursor:pointer;font-size:.87rem;transition:border-color .18s,background .18s}
+.radio:hover{border-color:var(--gold)}
+.radio input{width:auto;margin-top:3px;accent-color:var(--gold)}
+.consent{display:flex;gap:11px;align-items:flex-start;font-size:.82rem;color:var(--muted);
+  background:var(--surface-2);border-radius:2px;padding:14px}
+.consent input{width:auto;margin-top:3px;accent-color:var(--gold);flex:0 0 auto}
+.formnote{font-size:.78rem;color:var(--muted);margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+.sent{display:none;background:var(--surface-2);border:1px solid var(--gold);border-radius:3px;
+  padding:20px;font-size:.9rem}
+.sent.on{display:block}
+
+/* ---------- footer ---------- */
+footer.ft{background:var(--navy-deep);color:var(--on-navy-muted);font-size:.85rem}
+footer.ft .wrap{padding-block:48px 28px;display:grid;gap:30px}
+@media(min-width:820px){footer.ft .wrap{grid-template-columns:1.5fr 1fr 1fr}}
+footer.ft h4{font-family:var(--body);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--gold-bright);font-weight:700;margin-bottom:13px}
+footer.ft a{color:var(--on-navy-muted);text-decoration:none;display:block;padding-block:4px}
+footer.ft a:hover{color:var(--gold-bright)}
+footer.ft img.fl{height:62px;width:auto;margin-bottom:14px}
+.socials{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.socials a{width:36px;height:36px;border:1px solid rgba(242,237,227,.2);border-radius:2px;
+  display:grid;place-items:center;padding:0;transition:border-color .18s,color .18s}
+.socials a:hover{border-color:var(--gold-bright);color:var(--gold-bright)}
+.legal{border-top:1px solid rgba(242,237,227,.13);margin-top:6px}
+.legal .wrap{padding-block:22px;display:grid;gap:12px;font-size:.76rem;line-height:1.6}
+.legal .disc{color:var(--on-navy);background:rgba(195,149,60,.09);border-left:2px solid var(--gold);
+  padding:12px 15px;border-radius:2px}
+
+.placeholder{background:rgba(180,71,47,.12);border:1px dashed var(--alarm);color:var(--alarm);
+  padding:2px 7px;border-radius:2px;font-size:.72rem;font-weight:700;letter-spacing:.04em;
+  display:inline-block;font-family:var(--body)}
+
+/* ---------- reveal ---------- */
+.rv{opacity:1;transform:none}
+@media(prefers-reduced-motion:no-preference){
+  .rv{animation:rise .7s cubic-bezier(.22,1,.36,1) both;animation-timeline:view();animation-range:entry 0% cover 26%}
+}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+
+<div class="verify-strip">
+  <div class="wrap">
+    <span>Licensed and regulated. <b>Angad Sachdeva, RCIC&#8209;IRB</b></span>
+    <span>Verify any consultant on the <a href="https://college-ic.ca/protecting-the-public/find-an-immigration-consultant" target="_blank" rel="noopener">College public register</a></span>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <img src="brand/logo-on-dark.png" alt="Dot Com Immigration">
+      <span class="brand-txt">
+        <span class="n">Dot Com Immigration</span>
+        <span class="t">We Find Ways</span>
+      </span>
+    </a>
+    <nav class="links">
+      <a href="#checker">Deadline checker</a>
+      <a href="#matters">What happened</a>
+      <a href="#problems">How we help</a>
+      <a href="#verify">Verify us</a>
+      <a href="#about">About</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-gold btn-sm" href="#contact">Send us your letter</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Refugee appeals &middot; Detention &middot; Sponsorship appeals</p>
+      <h1>You waited two years for an answer.<em>Now you have fifteen days.</em></h1>
+      <p class="sub">A refused refugee claim starts a 15&#8209;day clock the moment you receive the written reasons. A detention review happens within 48 hours. Most people lose days deciding what the letter means. Find your deadline first. Decide second.</p>
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="#checker">Check my deadline</a>
+        <a class="btn btn-ghost" href="#contact">Send us the letter</a>
+      </div>
+      <div class="hero-trust">
+        <span><svg class="tick" viewBox="0 0 20 20" fill="currentColor"><path d="M8.3 14.6 4 10.3l1.4-1.4 2.9 2.9 6.3-6.3L16 6.9z"/></svg> Licensed RCIC&#8209;IRB</span>
+        <span><svg class="tick" viewBox="0 0 20 20" fill="currentColor"><path d="M8.3 14.6 4 10.3l1.4-1.4 2.9 2.9 6.3-6.3L16 6.9z"/></svg> Authorised before the IRB</span>
+        <span><svg class="tick" viewBox="0 0 20 20" fill="currentColor"><path d="M8.3 14.6 4 10.3l1.4-1.4 2.9 2.9 6.3-6.3L16 6.9z"/></svg> Deadline check costs nothing</span>
+      </div>
+    </div>
+
+    <div class="clock" id="checker">
+      <h2>What is my deadline?</h2>
+      <p class="hint">General timelines only, not legal advice on your file. Your own deadline can differ.</p>
+      <div class="field">
+        <label for="dtype">What did you receive?</label>
+        <select id="dtype">
+          <option value="rad15">Refugee claim refused &mdash; written reasons</option>
+          <option value="rad30">Notice of Appeal filed &mdash; record still to come</option>
+          <option value="det48">Someone was detained &mdash; first review</option>
+          <option value="det7">Detention continued at the first review</option>
+          <option value="det30">Detention continuing &mdash; further reviews</option>
+          <option value="other">Something else (C&#8209;12 letter, sponsorship refusal, direction to report)</option>
+        </select>
+      </div>
+      <div class="field" id="datefield">
+        <label for="ddate">Date you received it</label>
+        <input type="date" id="ddate">
+      </div>
+      <div class="readout" id="readout" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="wrap">
+    <div class="stat rv"><div class="v" data-count="259085">259,085</div><div class="k">Refugee claims still pending at the Board, August 2026</div></div>
+    <div class="stat rv"><div class="v" data-count="24">24</div><div class="k">Months a claim took from referral to decision, December 2025</div></div>
+    <div class="stat rv"><div class="v" data-count="15">15</div><div class="k">Days to file a Notice of Appeal once reasons are received</div></div>
+    <div class="stat rv"><div class="v" data-count="31">31%</div><div class="k">Of appeals decided on the merits were allowed in 2025</div></div>
+  </div>
+</section>
+
+<section class="band" id="matters">
+  <div class="wrap">
+    <p class="eyebrow rv">Start with the document in your hand</p>
+    <h2 class="rv" style="font-size:clamp(1.8rem,3.6vw,2.7rem);margin-bottom:14px">What happened to you?</h2>
+    <p class="lede rv" style="margin-bottom:34px">People do not search for an immigration consultant. They search for the words printed on the letter. Find yours.</p>
+    <div class="grid grid-3">
+      <article class="card rv"><span class="doc">Notice of Decision</span><h3>Your refugee claim was refused</h3><p>If you have a right to appeal, the Refugee Appeal Division is the next step. The clock runs from the day you received the written reasons, not the day of your hearing.</p><div class="clockline">&#9201; <b>15 days</b> to file the Notice of Appeal</div></article>
+      <article class="card rv"><span class="doc">Appellant&rsquo;s record</span><h3>Your appeal is filed but not perfected</h3><p>An appeal is largely a paper case. The record is where it is won or lost, and a late or thin record is the most common avoidable failure.</p><div class="clockline">&#9201; <b>30 days</b> under the Rules, check the practice notice</div></article>
+      <article class="card rv"><span class="doc">Ineligibility letter</span><h3>You were told you may be ineligible</h3><p>Bill C&#8209;12 took effect on 26 March 2026 and reaches back to 24 June 2020. A short visit years ago can affect a claim made now. Around 30,000 people were written to.</p><div class="clockline">&#9201; <b>Check your letter</b> and send it the same day</div></article>
+      <article class="card rv"><span class="doc">Detention</span><h3>Someone was stopped at the airport</h3><p>The detained person usually has no phone. If you are the relative making this search, you are the one who can act. The first review comes fast.</p><div class="clockline">&#9201; <b>48 hours</b> to the first detention review</div></article>
+      <article class="card rv"><span class="doc">Sponsorship refusal</span><h3>Your spouse or family member was refused</h3><p>A sponsor is the appellant at the Immigration Appeal Division. Sponsorship appeals rose from 2,495 filings in 2024 to 3,360 in 2025, the fastest growing category in the system.</p><div class="clockline">&#9201; <b>Deadlines apply</b> from the date of the decision</div></article>
+      <article class="card rv"><span class="doc">Direction to report</span><h3>You were told to report for removal</h3><p>Removals reached 23,160 in 2025 and 14,897 in the first eight months of 2026. Options narrow quickly once a removal date is set, so the date matters more than the argument.</p><div class="clockline">&#9201; <b>Act immediately</b>, do not wait for the date</div></article>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="problems" style="background:var(--surface-2)">
+  <div class="wrap">
+    <p class="eyebrow rv">The problems, and what we actually do about them</p>
+    <h2 class="rv" style="font-size:clamp(1.8rem,3.6vw,2.7rem);margin-bottom:14px">Honest answers to the six things that go wrong</h2>
+    <p class="lede rv" style="margin-bottom:30px">Every one of these is a version of the same problem. The system is slow for two years, then brutal for two weeks.</p>
+    <div class="pslist">
+      <details class="ps rv" open><summary><span class="num">01</span> You did not know the clock had started<svg class="chev" width="18" height="18" viewBox="0 0 20 20" fill="currentColor"><path d="M10 13 4.8 7.8 6.2 6.4 10 10.2l3.8-3.8 1.4 1.4z"/></svg></summary><div class="body"><div><h4>The problem</h4><p>The 15&#8209;day appeal deadline runs from the day the written reasons reach you, not the hearing date and not the date printed at the top. People routinely lose a week assuming otherwise.</p></div><div><h4>What we do</h4><p>Send a photo of the letter and we tell you your date. No charge, no commitment, no sales call. If the date has passed we tell you that too, because you still need to know.</p></div></div></details>
+      <details class="ps rv"><summary><span class="num">02</span> You cannot tell who is legitimate<svg class="chev" width="18" height="18" viewBox="0 0 20 20" fill="currentColor"><path d="M10 13 4.8 7.8 6.2 6.4 10 10.2l3.8-3.8 1.4 1.4z"/></svg></summary><div class="body"><div><h4>The problem</h4><p>Unlicensed agents are widespread in this market, and most people arriving here have already been burned once or know someone who was.</p></div><div><h4>What we do</h4><p>We tell you to verify us rather than trust us. Since 15 July 2026 the public register shows whether a licensee is in good standing and any disciplinary history, and a compensation fund now exists for clients defrauded by a licensee. Use a licensed consultant and that protection exists. Use a ghost agent and nothing does.</p></div></div></details>
+      <details class="ps rv"><summary><span class="num">03</span> Legal aid will not pay for a consultant<svg class="chev" width="18" height="18" viewBox="0 0 20 20" fill="currentColor"><path d="M10 13 4.8 7.8 6.2 6.4 10 10.2l3.8-3.8 1.4 1.4z"/></svg></summary><div class="body"><div><h4>The problem</h4><p>Legal Aid Ontario certificates can only be billed by roster lawyers. Appeals need a merit assessment first. Many people are refused, are over the threshold, or simply cannot wait for an intake inside a 15&#8209;day window.</p></div><div><h4>What we do</h4><p>We price discrete pieces of work rather than only full files. A deadline check, a decision review, a record prepared, submissions written. You can buy one small piece, see whether we are real, and decide from there.</p></div></div></details>
+      <details class="ps rv"><summary><span class="num">04</span> The person searching is not the person in trouble<svg class="chev" width="18" height="18" viewBox="0 0 20 20" fill="currentColor"><path d="M10 13 4.8 7.8 6.2 6.4 10 10.2l3.8-3.8 1.4 1.4z"/></svg></summary><div class="body"><div><h4>The problem</h4><p>A detained person has no phone. A claimant may not read English. A sponsor is the legal appellant but the refusal landed on someone else&rsquo;s file.</p></div><div><h4>What we do</h4><p>You can start a file on behalf of a relative. Our intake is built for the third party, because in detention and sponsorship matters that is almost always who is calling.</p></div></div></details>
+      <details class="ps rv"><summary><span class="num">05</span> You cannot read your own decision<svg class="chev" width="18" height="18" viewBox="0 0 20 20" fill="currentColor"><path d="M10 13 4.8 7.8 6.2 6.4 10 10.2l3.8-3.8 1.4 1.4z"/></svg></summary><div class="body"><div><h4>The problem</h4><p>A refusal, a fairness letter or a direction to report is dense legal English, read under stress, on a phone, often in a second language.</p></div><div><h4>What we do</h4><p>A written decision review in plain language. What the document is, what the deadline is, and what the realistic options are. Available in English and French.</p></div></div></details>
+      <details class="ps rv"><summary><span class="num">06</span> You think an appeal means telling the story again<svg class="chev" width="18" height="18" viewBox="0 0 20 20" fill="currentColor"><path d="M10 13 4.8 7.8 6.2 6.4 10 10.2l3.8-3.8 1.4 1.4z"/></svg></summary><div class="body"><div><h4>The problem</h4><p>Most people expect a second hearing. An appeal to the Refugee Appeal Division is largely decided on paper, and the record decides it.</p></div><div><h4>What we do</h4><p>We work where the case is actually won: finding the error in the decision and building the record properly. In 2025, 3,045 of 9,910 appeals decided on the merits were allowed.</p></div></div></details>
+    </div>
+  </div>
+</section>
+
+<section class="band verify" id="verify">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Do not trust us. Verify us.</p>
+      <h2>Three minutes that protect you from everyone, including us</h2>
+      <p>Anyone can put letters after a name on a website. The College of Immigration and Citizenship Consultants keeps a public register, and since 15 July 2026 it shows good standing and disciplinary history. Check us on it before you send a document or pay anything.</p>
+      <a class="btn btn-gold" href="https://college-ic.ca/protecting-the-public/find-an-immigration-consultant" target="_blank" rel="noopener">Open the public register</a>
+    </div>
+    <div class="steps">
+      <div class="step"><span class="n"></span><p>Open the College public register. It is the only authoritative list of licensed consultants in Canada.</p></div>
+      <div class="step"><span class="n"></span><p>Search <b>Angad Sachdeva</b>. Confirm the licence class reads <b>RCIC&#8209;IRB</b>, which is the class permitted to represent clients before the Immigration and Refugee Board.</p></div>
+      <div class="step"><span class="n"></span><p>Check the status is <b>in good standing</b> and read any disciplinary history shown.</p></div>
+      <div class="step"><span class="n"></span><p>Do the same for anyone else you are considering. If a person is not on that register, they cannot lawfully represent you for a fee.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band about" id="about">
+  <div class="wrap">
+    <figure class="portrait rv" style="margin:0">
+      <img src="brand/angad.jpg" alt="Angad Sachdeva, Regulated Canadian Immigration Consultant">
+      <figcaption>
+        <div class="nm">Angad Sachdeva</div>
+        <div class="cr">RCIC&#8209;IRB</div>
+      </figcaption>
+    </figure>
+    <div class="rv">
+      <p class="eyebrow">Who you will be dealing with</p>
+      <h2 style="font-size:clamp(1.8rem,3.4vw,2.6rem);margin-bottom:16px">A licensed consultant, and a clear limit on what that licence allows</h2>
+      <p class="lede" style="margin-bottom:16px">Angad Sachdeva holds an RCIC&#8209;IRB licence, the class authorised to represent clients before the Immigration and Refugee Board: refugee claims, refugee appeals, detention reviews, admissibility hearings and immigration appeals.</p>
+      <p class="lede" style="margin-bottom:16px">There is one thing that licence does not allow, and you should hear it from us rather than find out later. <strong>No consultant and no paralegal can represent you in a judicial review at the Federal Court. Only a lawyer can.</strong> If your matter needs that, we will say so and refer you.</p>
+      <p class="lede">Firm details, licence number and office address: <span class="placeholder">TO BE SUPPLIED</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="contact" style="background:var(--surface-2)">
+  <div class="wrap" style="max-width:940px">
+    <p class="eyebrow rv">No charge for the first look</p>
+    <h2 class="rv" style="font-size:clamp(1.8rem,3.6vw,2.7rem);margin-bottom:12px">Send us the letter</h2>
+    <p class="lede rv" style="margin-bottom:28px">Tell us what you received and when. We will tell you your deadline and what your realistic options are. If we are not the right people, we will say so.</p>
+
+    <div class="formwrap rv">
+      <form id="cform" novalidate>
+        <div class="frow two" style="margin-bottom:14px">
+          <div class="f"><label for="fname">Your name <span class="req">*</span></label><input id="fname" name="name" required autocomplete="name"></div>
+          <div class="f"><label for="femail">Email <span class="req">*</span></label><input id="femail" name="email" type="email" required autocomplete="email"></div>
+        </div>
+        <div class="frow two" style="margin-bottom:14px">
+          <div class="f"><label for="fphone">Phone or WhatsApp</label><input id="fphone" name="phone" type="tel" autocomplete="tel"><p class="help">Include the country code.</p></div>
+          <div class="f"><label for="flang">Preferred language</label><select id="flang" name="language"><option>English</option><option>Fran&ccedil;ais</option><option>Punjabi</option><option>Hindi</option><option>Urdu</option><option>Spanish</option><option>Haitian Creole</option><option>Other</option></select></div>
+        </div>
+
+        <div class="f" style="margin-bottom:14px">
+          <label>Who is this about? <span class="req">*</span></label>
+          <div class="radios">
+            <label class="radio"><input type="radio" name="who" value="me" checked><span>Myself</span></label>
+            <label class="radio"><input type="radio" name="who" value="relative"><span>A family member or friend</span></label>
+            <label class="radio"><input type="radio" name="who" value="detained"><span>Someone who is currently detained</span></label>
+            <label class="radio"><input type="radio" name="who" value="client"><span>A client I am referring</span></label>
+          </div>
+        </div>
+
+        <div class="frow two" style="margin-bottom:14px">
+          <div class="f"><label for="fmatter">What did you receive? <span class="req">*</span></label>
+            <select id="fmatter" name="matter" required>
+              <option value="">Please choose</option>
+              <option>Refugee claim refused, written reasons received</option>
+              <option>Appeal filed, record still to prepare</option>
+              <option>Letter saying I may be ineligible (Bill C&#8209;12)</option>
+              <option>Pre&#8209;removal risk assessment notice</option>
+              <option>Someone has been detained</option>
+              <option>Sponsorship application refused</option>
+              <option>Direction to report for removal</option>
+              <option>Upcoming refugee hearing</option>
+              <option>Something else</option>
+            </select></div>
+          <div class="f"><label for="fdate">Date on the document</label><input id="fdate" name="docDate" type="date"><p class="help">Or the date it reached you, if different.</p></div>
+        </div>
+
+        <div class="frow two" style="margin-bottom:14px">
+          <div class="f"><label for="fprov">Province</label><select id="fprov" name="province"><option>Ontario</option><option>Quebec</option><option>British Columbia</option><option>Alberta</option><option>Manitoba</option><option>Saskatchewan</option><option>Nova Scotia</option><option>New Brunswick</option><option>Newfoundland and Labrador</option><option>Prince Edward Island</option><option>Outside Canada</option></select></div>
+          <div class="f"><label for="frep">Do you already have a representative?</label><select id="frep" name="representative"><option>No</option><option>Yes, a lawyer</option><option>Yes, a consultant</option><option>I did, but not any more</option></select></div>
+        </div>
+
+        <div class="f" style="margin-bottom:14px">
+          <label for="ffile">Upload the letter</label>
+          <input id="ffile" name="file" type="file" accept=".pdf,.jpg,.jpeg,.png,.heic" multiple>
+          <p class="help">A clear photo of every page is fine. PDF, JPG, PNG or HEIC, up to 10&nbsp;MB each.</p>
+        </div>
+
+        <div class="f" style="margin-bottom:16px">
+          <label for="fmsg">Anything else we should know</label>
+          <textarea id="fmsg" name="message" placeholder="Dates, what you have already filed, anything you are worried about."></textarea>
+        </div>
+
+        <label class="consent" for="fconsent" style="margin-bottom:16px">
+          <input type="checkbox" id="fconsent" name="consent" required>
+          <span>I understand that sending this form does not create a representative relationship, and that no advice is given until a retainer is signed.</span>
+        </label>
+
+        <button class="btn btn-gold" type="submit" style="width:100%">Send and get my deadline</button>
+        <p class="formnote">We reply to deadline questions first, because they cannot wait. Every case is different. Eligibility and available remedies depend on your circumstances. No outcome is guaranteed.</p>
+      </form>
+      <div class="sent" id="sent">
+        <strong>This is a prototype.</strong> On the live site this submits to the practice inbox with your uploaded documents attached. Nothing has been sent from this preview.
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="ft">
+  <div class="wrap">
+    <div>
+      <img class="fl" src="brand/logo-on-dark.png" alt="Dot Com Immigration">
+      <p style="margin-bottom:10px">Refugee appeals, detention reviews, pre&#8209;removal risk assessments and immigration appeals before the Immigration and Refugee Board of Canada.</p>
+      <div class="socials" id="socials">
+        <span class="placeholder">SOCIAL LINKS TO BE SUPPLIED</span>
+      </div>
+    </div>
+    <div>
+      <h4>Matters</h4>
+      <a href="#matters">Refugee appeal (RAD)</a>
+      <a href="#matters">Bill C&#8209;12 ineligibility</a>
+      <a href="#matters">Pre&#8209;removal risk assessment</a>
+      <a href="#matters">Detention reviews</a>
+      <a href="#matters">Sponsorship appeals (IAD)</a>
+      <a href="#matters">Removal orders</a>
+    </div>
+    <div>
+      <h4>Practice</h4>
+      <a href="#checker">Deadline checker</a>
+      <a href="#verify">Verify our licence</a>
+      <a href="#about">About Angad Sachdeva</a>
+      <a href="#contact">Contact</a>
+      <a href="https://college-ic.ca/protecting-the-public/find-an-immigration-consultant" target="_blank" rel="noopener">College public register</a>
+    </div>
+  </div>
+  <div class="legal">
+    <div class="wrap">
+      <p><strong style="color:var(--on-navy)">Angad Sachdeva, RCIC&#8209;IRB</strong> &middot; Licence number <span class="placeholder">TBC</span> &middot; Registered name <span class="placeholder">TBC</span> &middot; <span class="placeholder">ADDRESS TBC</span></p>
+      <p>Regulated by the College of Immigration and Citizenship Consultants. Public register: <a href="https://college-ic.ca/protecting-the-public/find-an-immigration-consultant" target="_blank" rel="noopener" style="display:inline;color:var(--gold-bright)">college-ic.ca</a></p>
+      <p class="disc">Every case is different. Eligibility and available remedies depend on your circumstances. No outcome is guaranteed. The information on this site is general and is not legal advice on your file. No consultant may represent you in a judicial review at the Federal Court.</p>
+      <p>&copy; <span id="yr"></span> Dot Com Immigration. We Find Ways.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  document.getElementById("yr").textContent = new Date().getFullYear();
+
+  /* ---- deadline rules: only timelines confirmed against published IRB material ---- */
+  var RULES = {
+    rad15:{days:15, label:"to file your Notice of Appeal with the Refugee Appeal Division",
+      cite:'Counted from the day you received the written reasons. Source: Immigration and Refugee Board, Filing a refugee appeal.'},
+    rad30:{days:30, label:"to perfect the appeal by filing the appellant&rsquo;s record",
+      cite:'The RAD Rules set 30 days. A 2020 practice notice extended this period, so the operative figure must be confirmed against the current notice for your file.'},
+    det48:{hours:48, label:"until the first detention review before the Immigration Division",
+      cite:'The Immigration Division reviews the reasons for detention within 48 hours of detention, or as soon as possible afterwards.'},
+    det7:{days:7, label:"until the second detention review",
+      cite:'If continued detention is ordered at the first review, the next hearing takes place within seven days.'},
+    det30:{days:30, label:"until the next detention review",
+      cite:'After the seven day review, hearings are held at least once every 30 days while the person remains detained. An earlier review can be requested on new facts.'},
+    other:{none:true, label:"", cite:""}
+  };
+
+  var sel = document.getElementById("dtype");
+  var dat = document.getElementById("ddate");
+  var out = document.getElementById("readout");
+  var datefield = document.getElementById("datefield");
+  var timer = null;
+
+  function pad(n){ return String(n).padStart(2,"0"); }
+
+  function computeTarget(rule, from){
+    var t = new Date(from.getTime());
+    if (rule.hours) t.setHours(t.getHours() + rule.hours);
+    else t.setDate(t.getDate() + rule.days);
+    return t;
+  }
+
+  function cells(parts){
+    return '<div class="digits">' + parts.map(function(p){
+      return '<div class="dcell"><div class="v">'+p[0]+'</div><div class="k">'+p[1]+'</div></div>';
+    }).join("") + '</div>';
+  }
+
+  function render(){
+    if (timer) { clearInterval(timer); timer = null; }
+    var rule = RULES[sel.value];
+
+    if (rule.none){
+      datefield.hidden = true;
+      out.innerHTML =
+        '<p class="verdict"><strong>Deadlines vary for this one.</strong> Ineligibility letters, sponsorship refusals and directions to report each run on their own timeline, and some are very short.</p>' +
+        '<p class="cite">Send us the document today rather than working it out yourself. We will confirm the date at no charge.</p>';
+      return;
+    }
+
+    datefield.hidden = false;
+    if (!dat.value){
+      out.innerHTML = '<p class="verdict">Enter the date you received it and we will count the days.</p>' +
+        '<p class="cite">' + rule.cite + '</p>';
+      return;
+    }
+
+    var from = new Date(dat.value + "T09:00:00");
+    if (isNaN(from.getTime())){ out.innerHTML = '<p class="verdict">That date was not understood.</p>'; return; }
+    var target = computeTarget(rule, from);
+
+    function tick(){
+      var ms = target.getTime() - Date.now();
+      var past = ms < 0;
+      var a = Math.abs(ms);
+      var d = Math.floor(a/86400000);
+      var h = Math.floor(a/3600000) % 24;
+      var m = Math.floor(a/60000) % 60;
+      var s = Math.floor(a/1000) % 60;
+
+      var dateStr = target.toLocaleDateString("en-CA",{weekday:"long",year:"numeric",month:"long",day:"numeric"});
+
+      out.innerHTML =
+        cells([[d,"days"],[pad(h),"hrs"],[pad(m),"min"],[pad(s),"sec"]]) +
+        '<p class="verdict' + (past ? " past" : "") + '">' +
+          (past
+            ? '<strong>This date has passed.</strong> That does not always end the matter, but it changes what has to be argued. Contact us today.'
+            : '<strong>' + dateStr + '</strong> is the date by which you have ' + rule.label + '.') +
+        '</p>' +
+        '<p class="cite">' + rule.cite + ' This tool gives general timelines and is not advice on your file.</p>';
+    }
+    tick();
+    timer = setInterval(tick, 1000);
+  }
+
+  sel.addEventListener("change", render);
+  dat.addEventListener("input", render);
+  render();
+
+  /* ---- animated stat counters ---- */
+  var seen = new WeakSet();
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (!e.isIntersecting || seen.has(e.target)) return;
+      seen.add(e.target);
+      var el = e.target;
+      var raw = el.getAttribute("data-count");
+      var suffix = el.textContent.indexOf("%") > -1 ? "%" : "";
+      var end = parseInt(raw, 10);
+      if (isNaN(end)) return;
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      var t0 = null, dur = 1100;
+      function step(ts){
+        if (!t0) t0 = ts;
+        var p = Math.min((ts - t0)/dur, 1);
+        var eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(end * eased).toLocaleString("en-CA") + suffix;
+        if (p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  }, {threshold:.5});
+  document.querySelectorAll("[data-count]").forEach(function(el){ io.observe(el); });
+
+  /* ---- fallback reveal for browsers without scroll-driven animations ---- */
+  if (!(CSS.supports && CSS.supports("animation-timeline","view()"))){
+    var rio = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if (e.isIntersecting){ e.target.style.animation = "rise .7s cubic-bezier(.22,1,.36,1) both"; rio.unobserve(e.target); }
+      });
+    }, {threshold:.12});
+    document.querySelectorAll(".rv").forEach(function(el){ rio.observe(el); });
+  }
+
+  /* ---- contact form ---- */
+  document.getElementById("cform").addEventListener("submit", function(ev){
+    ev.preventDefault();
+    var f = ev.currentTarget;
+    var bad = null;
+    ["fname","femail","fmatter"].forEach(function(id){
+      var el = document.getElementById(id);
+      if (!el.value.trim() && !bad) bad = el;
+    });
+    if (!document.getElementById("fconsent").checked && !bad) bad = document.getElementById("fconsent");
+    if (bad){ bad.focus(); bad.style.borderColor = "var(--alarm)"; return; }
+    f.hidden = true;
+    document.getElementById("sent").classList.add("on");
+    document.getElementById("sent").scrollIntoView({behavior:"smooth", block:"center"});
+  });
+})();
+</script>

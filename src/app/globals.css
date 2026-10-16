@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand palette sampled directly from the Dot Com Immigration logo */
+  --color-navy-950: #050F1C;
+  --color-navy-900: #08203B;
+  --color-navy-800: #0B2240;
+  --color-navy-700: #102847;
+  --color-navy-600: #15325A;
+  --color-navy-500: #1C4176;
+  --color-navy-400: #2C5692;
+
+  --color-gold-600: #A87C2C;
+  --color-gold-500: #C3953C;
+  --color-gold-400: #D4A94F;
+  --color-gold-300: #E3C077;
+  --color-gold-200: #F0DBAC;
+
+  --color-cream: #FAF8F4;
+  --color-sand: #F2EDE3;
+
+  --font-display: "Marcellus", Georgia, "Times New Roman", serif;
+  --font-sans: "Public Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  --animate-marquee: marquee 40s linear infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@layer base {
+  :root {
+    --bg: var(--color-cream);
+    --fg: var(--color-navy-900);
+  }
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.015em;
+  }
+  ::selection {
+    background: var(--color-gold-300);
+    color: var(--color-navy-900);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-gold-500);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+@layer utilities {
+  .container-x { @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8; }
+
+  .text-balance { text-wrap: balance; }
+  .text-pretty  { text-wrap: pretty; }
+
+  .gold-rule {
+    background: linear-gradient(90deg, transparent, var(--color-gold-500), transparent);
+  }
+
+  .gold-text {
+    background: linear-gradient(135deg, #E3C077 0%, #C3953C 45%, #A87C2C 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .glass {
+    background: color-mix(in oklab, white 72%, transparent);
+    backdrop-filter: blur(14px) saturate(140%);
+  }
+  .glass-dark {
+    background: color-mix(in oklab, #08203B 62%, transparent);
+    backdrop-filter: blur(14px) saturate(140%);
+  }
+
+  /* Subtle animated mesh used behind the hero */
+  .mesh {
+    background:
+      radial-gradient(60rem 40rem at 12% -10%, rgba(195,149,60,0.22), transparent 60%),
+      radial-gradient(50rem 36rem at 92% 8%,  rgba(28,65,118,0.45), transparent 62%),
+      radial-gradient(44rem 34rem at 50% 108%, rgba(195,149,60,0.14), transparent 60%);
+  }
+
+  .noise::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
