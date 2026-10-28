@@ -61,8 +61,8 @@ export default function WaitTimes({ locale }: { locale: string }) {
               aria-expanded={on}
               className="hair-b block w-full cursor-pointer px-0 py-5 text-left transition-colors hover:bg-[var(--surface)]"
             >
-              <div className="flex items-baseline gap-4">
-                <span className="min-w-0 flex-1 text-[0.98rem]">{L === "fr" ? r.fr : r.en}</span>
+              <div className="kv">
+                <span className="text-[0.98rem]">{L === "fr" ? r.fr : r.en}</span>
                 <span className="font-mono text-sm tabular-nums accent-type">
                   {r.months} {t.months}
                 </span>
@@ -81,8 +81,8 @@ export default function WaitTimes({ locale }: { locale: string }) {
         })}
 
         <div className="hair-b py-5">
-          <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
-            <span className="min-w-0 flex-1 text-[0.98rem]">{t.detention}</span>
+          <div className="kv">
+            <span className="text-[0.98rem]">{t.detention}</span>
             <span className="font-mono text-sm tabular-nums text-[var(--alarm)]">{DETENTION[L]}</span>
           </div>
           <p className="mt-2 text-xs text-[var(--muted)]">{t.detentionNote}</p>

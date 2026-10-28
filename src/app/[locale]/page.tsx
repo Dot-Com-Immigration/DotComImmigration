@@ -164,11 +164,11 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         </Reveal>
         <div className="hair-t">
           {d.stats.map((s) => (
-            <div key={s.label} className="hair-b flex flex-wrap items-baseline gap-x-7 gap-y-2 py-6">
+            <div key={s.label} className="statrow hair-b py-6">
               <span className="font-display text-[clamp(2.2rem,6vw,4rem)] leading-none tabular-nums accent-type">
                 {s.count ? <Counter to={s.count} display={s.value} locale={locale} /> : s.value}
               </span>
-              <span className="min-w-0 flex-1 text-[0.95rem] text-[var(--fg-dim)]">{s.label}</span>
+              <span className="text-[0.95rem] text-[var(--fg-dim)]">{s.label}</span>
               <a href={s.source.url} target="_blank" rel="noopener noreferrer"
                 className="font-mono text-[0.64rem] uppercase tracking-wider text-[var(--muted)] underline-offset-4 hover:text-[var(--fg)] hover:underline">
                 {s.source.label}

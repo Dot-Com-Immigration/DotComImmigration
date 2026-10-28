@@ -835,3 +835,25 @@ footer .display-s{color:#F2F6FB}
 .mx-f p{margin:0 0 6px;font-size:.84rem;color:var(--grey);line-height:1.45}
 .mx-f a{font-size:.88rem;font-weight:700;color:var(--red)}
 .mx-f a:hover{text-decoration:underline}
+
+/* ---------- label / value rows ----------
+   These were flex rows where a long monospace value refused to give ground
+   and squeezed the label to one word per line, or sat on top of it. A grid
+   stacks them on narrow screens and only puts them side by side once there
+   is room, so neither can crush the other. */
+.kv{display:grid;gap:3px 18px}
+@media(min-width:560px){
+  .kv{grid-template-columns:1fr auto;align-items:baseline}
+  .kv>:last-child{text-align:right}
+}
+.statrow{display:grid;gap:4px 26px;align-items:baseline}
+@media(min-width:760px){
+  .statrow{grid-template-columns:auto minmax(0,1fr) auto}
+  .statrow>:last-child{text-align:right}
+}
+
+/* A closed <details> hides its content through the UA stylesheet, but that
+   is overridden the moment a child sets its own display (ours is a grid).
+   The result was every collapsed panel still laid out, overlapping the
+   summary beneath it. Hide them explicitly. */
+details:not([open]) > *:not(summary){display:none}
