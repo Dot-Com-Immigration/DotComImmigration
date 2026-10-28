@@ -5,7 +5,7 @@ export function Section({
   children, className, tint, id, flush,
 }: { children: React.ReactNode; className?: string; tint?: boolean; id?: string; flush?: boolean }) {
   return (
-    <section id={id} className={cn(!flush && "py-16 sm:py-24 lg:py-32", tint && "bg-[var(--surface)]", className)}>
+    <section id={id} className={cn(!flush && "band", tint && "bg-[var(--paper-2)]", className)}>
       <div className="container-x">{children}</div>
     </section>
   );

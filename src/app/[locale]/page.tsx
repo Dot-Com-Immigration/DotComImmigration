@@ -7,6 +7,8 @@ import { Reveal, Counter } from "@/components/motion";
 import DeadlineChecker from "@/components/deadline-checker";
 import GuidedFinder from "@/components/guided-finder";
 import ProblemMatcher from "@/components/problem-matcher";
+import SocialProof from "@/components/social-proof";
+import Ticker from "@/components/ticker";
 import WaitTimes from "@/components/tools/wait-times";
 import { JsonLd, faqSchema } from "@/lib/schema";
 
@@ -36,7 +38,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
 
       {/* ---------- typographic hero. no photograph ---------- */}
       <section className="relative grain overflow-hidden">
-        <div className="container-x relative z-10 pb-14 pt-12 sm:pb-20 sm:pt-16">
+        <div className="enter container-x relative z-10 pb-14 pt-12 sm:pb-20 sm:pt-16">
           <p className="meta mb-8">{d.hero.eyebrow}</p>
           <h1 className="display-xl mb-8">
             {d.hero.h1a}
@@ -44,7 +46,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
           </h1>
           <div className="hair-t grid gap-8 pt-8 lg:grid-cols-[1.1fr_0.9fr]">
             <p className="measure text-[1.05rem] leading-relaxed text-[var(--fg-dim)]">{d.hero.sub}</p>
-            <div className="flex flex-col items-start gap-4">
+            <div className="flex flex-col items-start gap-5">
               <div className="flex flex-wrap gap-2.5">
                 <Cta href={`/${locale}/deadline-checker`}>{d.cta.primary}</Cta>
                 <Cta href={`/${locale}/contact`} ghost>{d.cta.secondary}</Cta>
@@ -56,10 +58,36 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
                   </li>
                 ))}
               </ul>
+
+              {/* The person behind the licence, with the number anyone can check. */}
+              <div className="cred">
+                <span className="av">
+                  <Image src="/brand/angad.jpg" alt={site.consultant.name} width={112} height={112} />
+                </span>
+                <span style={{ minWidth: 0 }}>
+                  <b style={{ display: "block", fontSize: ".97rem" }}>
+                    {site.consultant.name}, {site.consultant.credential}
+                  </b>
+                  <span style={{ display: "block", fontSize: ".84rem", color: "var(--grey)" }}>
+                    {fr ? "Permis" : "Licence"} {site.consultant.licenceNumber} &middot;{" "}
+                    {fr ? "Coll\u00e8ge des consultants en immigration et en citoyennet\u00e9"
+                        : "College of Immigration and Citizenship Consultants"}
+                  </span>
+                  <a className="ok" href={REGISTER_URL} target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" aria-hidden>
+                      <path d="M8.3 14.6 4 10.3l1.4-1.4 2.9 2.9 6.3-6.3L16 6.9z" />
+                    </svg>{" "}
+                    {fr ? "Autoris\u00e9 devant les quatre sections de la CISR"
+                        : "Authorised at all four IRB divisions"}
+                  </a>
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </section>
+
+      <Ticker locale={locale} />
 
       {/* ---------- the clocks, as a hairline band ---------- */}
       <div className="hair-t hair-b overflow-hidden">
@@ -110,7 +138,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         </Reveal>
         <div className="bento">
           {tools.map((t) => (
-            <Link key={t.h} href={`/${locale}${t.h}`} className={`${t.span} group p-7 transition-colors hover:bg-[var(--surface-2)]`}>
+            <Link key={t.h} href={`/${locale}${t.h}`} className={`${t.span} group p-7`}>
               <p className="meta mb-3">{t.m}</p>
               <h3 className="display-s mb-2">{t.t}</h3>
               <p className="text-sm text-[var(--muted)]">{t.b}</p>
@@ -246,6 +274,9 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       </Section>
 
       {/* ---------- close ---------- */}
+      {/* ---------- social proof: the real posts ---------- */}
+      <SocialProof locale={locale} />
+
       <Section>
         <div className="hair-t pt-12">
           <p className="meta mb-6">{d.contact.eyebrow}</p>
