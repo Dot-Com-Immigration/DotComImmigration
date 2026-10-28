@@ -18,7 +18,9 @@ export const site = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://dotcomimmigration.com",
 
   /** Exactly as it appears on the College public register. */
-  registeredName: "TODO: confirm against the College public register (site currently shows 'Dot.Com Immigration', which is a trade name, not necessarily the registered name)",
+  /** As it appears on the College public register. s.44(1) requires this
+   *  exact string in any written advertisement, which includes this site. */
+  registeredName: "DOTCOM IMMIGRATION",
 
   consultant: {
     name: "Angad Sachdeva",
