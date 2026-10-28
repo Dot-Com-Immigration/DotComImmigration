@@ -33,9 +33,12 @@ export default function ContactForm({ d }: { d: Dict }) {
       if (!res.ok) throw new Error(json?.error ?? "failed");
       setState("ok");
       form.reset();
-    } catch {
+    } catch (err) {
       setState("err");
-      setMsg(c.error);
+      // Surface what the server actually said. Swallowing it left the visitor
+      // with a generic failure and left us guessing at which step broke.
+      const detail = err instanceof Error ? err.message : "";
+      setMsg(detail && detail !== "failed" ? detail : c.error);
     }
   }
 
