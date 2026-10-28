@@ -6,6 +6,7 @@ import { Section, Meta, H2, Lede, Cta, Row } from "@/components/ui";
 import { Reveal, Counter } from "@/components/motion";
 import DeadlineChecker from "@/components/deadline-checker";
 import GuidedFinder from "@/components/guided-finder";
+import ProblemMatcher from "@/components/problem-matcher";
 import WaitTimes from "@/components/tools/wait-times";
 import { JsonLd, faqSchema } from "@/lib/schema";
 
@@ -71,6 +72,9 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
           ))}
         </div>
       </div>
+
+      {/* ---------- the matcher: pick your problem, get the answer ---------- */}
+      <ProblemMatcher locale={locale} />
 
       {/* ---------- deadline checker, given the room it deserves ---------- */}
       <Section>

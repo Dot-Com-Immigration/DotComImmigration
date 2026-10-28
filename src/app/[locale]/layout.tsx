@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import SiteHeader from "@/components/site-header";
 import SiteFooter from "@/components/site-footer";
+import AssistantDock from "@/components/assistant-dock";
 import { getDict, isLocale } from "@/content";
 import { JsonLd, organizationSchema, websiteSchema, siteNavigationSchema, offerCatalogSchema } from "@/lib/schema";
 import { site } from "@/site.config";
@@ -53,6 +54,7 @@ export default async function LocaleLayout({
       <SiteHeader d={d} locale={locale} />
       <main id="main">{children}</main>
       <SiteFooter d={d} locale={locale} />
+      <AssistantDock locale={locale} />
     </div>
   );
 }
