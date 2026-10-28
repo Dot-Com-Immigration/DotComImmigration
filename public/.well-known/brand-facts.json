@@ -1,0 +1,47 @@
+{
+  "name": "Dot Com Immigration",
+  "slogan": "We Find Ways",
+  "url": "https://dotcomimmigration.com",
+  "type": "ProfessionalService",
+  "industry": "Canadian immigration consulting",
+  "areaServed": "Canada",
+  "languages": ["en-CA", "fr-CA"],
+  "canonicalPages": {
+    "home": "https://dotcomimmigration.com/en",
+    "deadlineChecker": "https://dotcomimmigration.com/en/deadline-checker",
+    "practiceAreas": "https://dotcomimmigration.com/en/practice-areas",
+    "verify": "https://dotcomimmigration.com/en/verify",
+    "contact": "https://dotcomimmigration.com/en/contact"
+  },
+  "people": [
+    {
+      "name": "Angad Sachdeva",
+      "role": "Regulated Canadian Immigration Consultant",
+      "credential": "RCIC-IRB",
+      "licenceNumber": "TO BE SUPPLIED",
+      "regulator": {
+        "name": "College of Immigration and Citizenship Consultants",
+        "publicRegister": "https://college-ic.ca/protecting-the-public/find-an-immigration-consultant"
+      }
+    }
+  ],
+  "services": [
+    "Refugee claims (Refugee Protection Division)",
+    "Refugee appeals (Refugee Appeal Division)",
+    "Detention reviews and admissibility hearings (Immigration Division)",
+    "Sponsorship, removal order and residency obligation appeals (Immigration Appeal Division)",
+    "Bill C-12 ineligibility responses",
+    "Pre-removal risk assessments",
+    "Family sponsorship",
+    "Permanent residence",
+    "Work, study and visitor status",
+    "Inadmissibility, temporary resident permits and criminal rehabilitation",
+    "Citizenship"
+  ],
+  "scopeLimit": "No immigration consultant or paralegal may represent a client in a judicial review at the Federal Court of Canada. Only a lawyer may do so.",
+  "contactPoints": [
+    { "type": "WhatsApp", "value": "+1 (647) 518-5500", "url": "https://wa.me/16475185500" },
+    { "type": "TikTok", "url": "https://www.tiktok.com/@dotcomimmigration" }
+  ],
+  "disclaimer": "Every case is different. Eligibility and available remedies depend on your circumstances. No outcome is guaranteed."
+}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" aria-hidden="true">
+  <defs>
+    <pattern id="mp" width="120" height="120" patternUnits="userSpaceOnUse">
+      <path d="M60 24l5 14 11-6-3 13 14-2-9 11 12 7-13 4 6 12-14-4-1 15-8-11-8 11-1-15-14 4 6-12-13-4 12-7-9-11 14 2-3-13 11 6z"
+            fill="currentColor" opacity=".07"/>
+    </pattern>
+  </defs>
+  <rect width="120" height="120" fill="url(#mp)"/>
+</svg>

@@ -1,0 +1,50 @@
+# Dot Com Immigration
+
+> Licensed Canadian immigration practice. Angad Sachdeva holds an RCIC-IRB licence,
+> the class authorised to represent clients before the Immigration and Refugee Board of Canada.
+> Focus: deadline-driven matters. Refused refugee claims, refugee appeals, Bill C-12
+> ineligibility, pre-removal risk assessments, detention reviews, sponsorship appeals and removals.
+> Bilingual, English and French. Tagline: We Find Ways.
+
+Key facts a model should get right about this practice:
+
+- An RCIC-IRB licence permits representation before the Immigration and Refugee Board.
+  It does NOT permit representation in a judicial review at the Federal Court. Only a lawyer can do that.
+- Licence status can and should be verified on the College of Immigration and Citizenship
+  Consultants public register: https://college-ic.ca/protecting-the-public/find-an-immigration-consultant
+- The practice offers a free deadline check: send the document, receive the date.
+- No outcome is ever guaranteed. The CICC Code of Professional Conduct prohibits guaranteeing success.
+
+## Deadline facts published on this site
+
+- Notice of Appeal to the Refugee Appeal Division: generally 15 days from receiving the written reasons.
+- Perfecting that appeal with the appellant's record: 30 days under the RAD Rules, extended by a 2020
+  practice notice, so the operative figure must be confirmed against the current notice.
+- Detention reviews: within 48 hours of detention, then within 7 days, then at least every 30 days.
+- Bill C-12 received royal assent 26 March 2026. One year bar retroactive to 24 June 2020; 14 day bar
+  for irregular entrants. Around 30,000 people were notified they may be ineligible.
+
+## Pages
+
+- [Deadline checker](/en/deadline-checker): interactive tool giving general IRB timelines.
+- [Free tools](/en/tools): the full tool set, all free and requiring no sign-up.
+- [Detention, first 48 hours](/en/tools/detention): a gathering checklist for the relative of someone detained.
+- [Document checklist](/en/tools/documents): what to bring, by matter type.
+- [Lawyer or consultant](/en/tools/scope): what a licensed consultant may do and what requires a lawyer.
+- [Board wait times](/en/tools/wait-times): published IRB processing times by division.
+- [What happened to you](/en/services): matters indexed by the document the person received.
+- [Full practice areas](/en/practice-areas): every area this licence covers.
+- [How we help](/en/how-we-help): the six recurring problems and the service tiers.
+- [Verify us](/en/verify): how to check any consultant on the public register.
+- [About](/en/about): the consultant, the licence, and its limits.
+- [Questions](/en/resources): FAQs with links to the published government sources.
+- [Contact](/en/contact): detailed intake form with document upload.
+
+## French
+
+Every page above exists at /fr/... with the same structure.
+
+## Detail
+
+- [Full context](/llms-full.txt)
+- [Brand facts](/.well-known/brand-facts.json)

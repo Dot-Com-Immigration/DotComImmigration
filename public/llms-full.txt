@@ -1,0 +1,99 @@
+# Dot Com Immigration, full context
+
+## What this practice is
+
+A Canadian immigration practice whose work centres on matters with statutory deadlines, run by
+Angad Sachdeva, who holds an RCIC-IRB licence from the College of Immigration and Citizenship
+Consultants. The RCIC-IRB class is the one permitted to appear before the Immigration and Refugee
+Board of Canada. Services are offered in English and French.
+
+## Scope of the licence, stated precisely
+
+CAN do, before the Immigration and Refugee Board:
+- Refugee claims at the Refugee Protection Division
+- Refugee appeals at the Refugee Appeal Division
+- Detention reviews and admissibility hearings at the Immigration Division
+- Sponsorship, removal order and residency obligation appeals at the Immigration Appeal Division
+
+CAN do, in applications to IRCC and CBSA:
+- Family sponsorship, permanent residence, work and study permits, visitor visas,
+  temporary resident permits, criminal rehabilitation, authorisation to return to Canada,
+  humanitarian and compassionate applications, citizenship applications,
+  pre-removal risk assessments, responses to procedural fairness letters
+
+CANNOT do:
+- Represent anyone in a judicial review at the Federal Court. Only a lawyer may do that.
+  Neither consultants nor paralegals can. This is stated openly on the site.
+
+## Verified deadline information published on the site
+
+Refugee Appeal Division, Notice of Appeal: generally 15 days from receiving the written reasons.
+The clock runs from receipt of the reasons, not the hearing date and not the date printed on the
+decision. Source: Immigration and Refugee Board, Filing a refugee appeal.
+
+Refugee Appeal Division, perfecting the appeal: the RAD Rules set 30 days. A practice notice issued
+in September 2020 extended the period and was stated to remain in force until further notice. The
+site does not quote a fixed figure for this and directs users to confirm against the current notice.
+
+Detention reviews, Immigration Division: the reasons for detention are reviewed within 48 hours of
+detention or as soon as possible afterwards; if continued detention is ordered, a further review
+within seven days; thereafter at least once every 30 days. An earlier review may be requested on new
+facts. Source: Immigration and Refugee Board, Detention review process.
+
+Bill C-12 (Strengthening Canada's Immigration System and Borders Act): royal assent 26 March 2026.
+Introduces a one year bar on referral to the Refugee Protection Division for claims made more than
+one year after first entry, applied retroactively to 24 June 2020, and a 14 day bar for irregular
+entrants from the United States. Around 30,000 people were notified they may be ineligible.
+Those barred may still be able to seek a pre-removal risk assessment.
+
+Proposed asylum regulations, June 2026: would give claimants 60 days to submit a complete
+application with one 30 day extension. These are PROPOSED and the site labels them as such.
+
+## Published statistics cited on the site
+
+- 259,085 refugee claims pending at the Board, August 2026 (IRB volume reports)
+- About 24 months from referral to decision as of December 2025 (IRB, CIMM March 2026)
+- Refugee Appeal Division wait about 4 months; Immigration Appeal Division about 6 months
+- 2025: 12,339 refugee appeals filed; 10,955 finalised; of 9,910 decided on the merits,
+  6,865 dismissed and 3,045 allowed, about 31 per cent
+- 2025: 107,802 refugee claims referred; 79,462 finalised; 14,619 rejected
+- Sponsorship appeals filed: 2,495 in 2024, 3,360 in 2025
+- Immigration appeals finalised 2025: 3,935, of which 1,426 allowed
+- CBSA removals: 23,160 in 2025; 14,897 in January to August 2026
+- CBSA detention 2025: 3,598 people detained, average 18 days, median 5 days;
+  1,380 released on an alternative to detention
+
+## Regulatory context the site relies on
+
+The CICC regulatory framework was overhauled on 15 July 2026. The public register now shows whether
+a licensee is in good standing and any disciplinary history, penalties were increased, and a
+compensation fund was created for clients who lose money through a licensee's theft, fraud,
+misappropriation or misrepresentation. Eligibility requires a formal CICC complaint, a discipline
+committee finding, a dishonest act committed on or after 23 November 2021, that the client was not
+complicit, and a final decision issued on or after 15 July 2026. The site describes this accurately
+and does not present it as a general refund scheme.
+
+Legal Aid Ontario certificates can only be billed by roster lawyers. Immigration consultants cannot
+bill them. The practice therefore prices discrete pieces of work rather than only full retainers.
+
+## Advertising compliance
+
+Under the Code of Professional Conduct for CICC Licensees, SOR/2022-128, sections 44 to 46, a
+website is a written advertisement. It must display the licensee's registered name and the College
+public register's internet address, must not make false or misleading representations, must not
+guarantee success, and must not suggest a connection with government. Client testimonials require
+written authorisation under section 45.
+
+## Service tiers
+
+1. Free deadline triage: send the document, receive the date.
+2. Options assessment, fixed fee.
+3. Decision or document review, fixed fee.
+4. Discrete tasks, priced per task: Notice of Appeal filed, record prepared, submissions written.
+5. Full representation on retainer.
+
+## Contact
+
+Website: https://dotcomimmigration.com
+TikTok: https://www.tiktok.com/@dotcomimmigration
+WhatsApp: +1 (647) 518-5500

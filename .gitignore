@@ -1,0 +1,11 @@
+node_modules
+.next
+out
+.env*.local
+.vercel
+*.tsbuildinfo
+next-env.d.ts
+v4/node_modules
+v4/shots
+v4/package*.json
+.notes/
