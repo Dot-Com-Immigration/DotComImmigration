@@ -31,7 +31,8 @@
   --rule:#DFE4EB; --rule-2:#C3CBD6;
   --shadow:0 1px 2px rgba(14,27,46,.05),0 12px 28px -18px rgba(14,27,46,.28);
   --shadow-lg:0 2px 4px rgba(14,27,46,.06),0 24px 48px -24px rgba(14,27,46,.34);
-  --serif:"Plus Jakarta Sans",ui-sans-serif,system-ui,-apple-system,sans-serif;
+  --serif:"Instrument Serif",Georgia,"Times New Roman",serif;
+  --serif-2:"Source Serif 4",Georgia,serif;
   --ui:"Inter Tight",ui-sans-serif,system-ui,-apple-system,sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
   --bg:var(--paper); --fg:var(--ink);
@@ -52,7 +53,11 @@
 *{box-sizing:border-box;border-color:var(--rule)}
 body{background:var(--bg);color:var(--fg);font-family:var(--ui);font-size:16.5px;
   line-height:1.62;overflow-x:hidden;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
-h1,h2,h3,h4,h5{font-family:var(--serif);font-weight:800;line-height:1.1;letter-spacing:-.03em;text-wrap:balance}
+/* Instrument Serif is a single-weight display face: it is meant to be set
+   large and light, never faux-bolded. Small headings move to Source Serif,
+   which has real weights and holds up at text sizes. */
+h1,h2{font-family:var(--serif);font-weight:400;line-height:1.02;letter-spacing:-.018em;text-wrap:balance}
+h3,h4,h5{font-family:var(--serif-2);font-weight:600;line-height:1.18;letter-spacing:-.012em;text-wrap:balance}
 a{color:inherit;text-decoration:none}
 img,svg{display:block;max-width:100%}
 button,input,select,textarea{font:inherit;color:inherit}
@@ -63,10 +68,10 @@ button,input,select,textarea{font:inherit;color:inherit}
   padding-left:max(20px,env(safe-area-inset-left,0px));
   padding-right:max(20px,env(safe-area-inset-right,0px))}
 .band{padding-block:clamp(44px,5vw,80px)}
-.xl{font-size:clamp(2.1rem,4.6vw,3.8rem);line-height:1.07;letter-spacing:-.034em}
-.lg{font-size:clamp(1.9rem,3.8vw,3rem);line-height:1.08}
-.md{font-size:clamp(1.55rem,2.7vw,2.2rem);line-height:1.14}
-.sm{font-size:clamp(1.12rem,1.7vw,1.38rem);line-height:1.24}
+.xl{font-family:var(--serif);font-weight:400;font-size:clamp(2.7rem,6.6vw,5.6rem);line-height:.98;letter-spacing:-.02em}
+.lg{font-family:var(--serif);font-weight:400;font-size:clamp(2.2rem,5vw,4rem);line-height:1;letter-spacing:-.018em}
+.md{font-family:var(--serif);font-weight:400;font-size:clamp(1.9rem,3.6vw,3rem);line-height:1.04;letter-spacing:-.015em}
+.sm{font-family:var(--serif-2);font-weight:600;font-size:clamp(1.1rem,1.7vw,1.35rem);line-height:1.22}
 .measure{max-width:64ch}.measure-t{max-width:50ch}
 .lab{font-family:var(--ui);font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--red)}
 .lab.g{color:var(--grey)}
@@ -119,7 +124,7 @@ nav.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:60;
 nav.top .wrap{display:flex;align-items:center;gap:18px;padding-block:13px}
 .brand{display:flex;align-items:center;gap:11px}
 .brand img{height:52px;width:auto}
-.brand i{font-style:normal;display:none;font-family:var(--serif);font-weight:800;font-size:1.12rem;letter-spacing:-.02em;color:var(--navy)}
+.brand i{font-style:normal;display:none;font-family:var(--serif-2);font-weight:700;font-size:1.12rem;letter-spacing:-.02em;color:var(--navy)}
 @media(min-width:600px){.brand i{display:block}}
 .nl{margin-left:auto;display:none;gap:22px;align-items:center}
 @media(min-width:1060px){.nl{display:flex}}
@@ -654,14 +659,14 @@ section[id],div[id]{scroll-margin-top:104px}
 .hair-r{border-right:1px solid var(--rule)}
 .rule{height:1px;background:var(--rule);border:0}
 
-.display-xl{font-family:var(--serif);font-weight:800;font-size:clamp(2.1rem,4.6vw,3.8rem);
-  line-height:1.07;letter-spacing:-.034em;text-wrap:balance}
-.display-l{font-family:var(--serif);font-weight:800;font-size:clamp(1.9rem,3.8vw,3rem);
-  line-height:1.08;letter-spacing:-.03em;text-wrap:balance}
-.display-m{font-family:var(--serif);font-weight:800;font-size:clamp(1.55rem,2.7vw,2.2rem);
-  line-height:1.14;letter-spacing:-.028em;text-wrap:balance}
-.display-s{font-family:var(--serif);font-weight:800;font-size:clamp(1.12rem,1.7vw,1.38rem);
-  line-height:1.24;letter-spacing:-.02em}
+.display-xl{font-family:var(--serif);font-weight:400;font-size:clamp(2.7rem,6.6vw,5.6rem);
+  line-height:.98;letter-spacing:-.02em;text-wrap:balance}
+.display-l{font-family:var(--serif);font-weight:400;font-size:clamp(2.2rem,5vw,4rem);
+  line-height:1;letter-spacing:-.018em;text-wrap:balance}
+.display-m{font-family:var(--serif);font-weight:400;font-size:clamp(1.9rem,3.6vw,3rem);
+  line-height:1.04;letter-spacing:-.015em;text-wrap:balance}
+.display-s{font-family:var(--serif-2);font-weight:600;font-size:clamp(1.08rem,1.6vw,1.3rem);
+  line-height:1.22;letter-spacing:-.01em}
 
 .meta{font-family:var(--ui);font-size:.74rem;font-weight:700;letter-spacing:.09em;
   text-transform:uppercase;color:var(--red)}
@@ -813,3 +818,20 @@ footer .display-s{color:#F2F6FB}
   background-size:22px 22px;
   -webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,.5),transparent 70%);
   mask-image:linear-gradient(180deg,rgba(0,0,0,.5),transparent 70%)}
+
+/* the matcher's illustration: all frames stacked, only the live one shown,
+   so switching cases cross-fades instead of flashing a reload */
+.mx-art{position:relative;aspect-ratio:320/240;max-height:230px;margin-bottom:4px;
+  border:1px solid var(--rule);border-radius:10px;background:var(--paper-2);overflow:hidden}
+.mx-art img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:10px;
+  opacity:0;transform:scale(.97);transition:opacity .36s ease,transform .5s cubic-bezier(.22,1,.36,1)}
+.mx-art img.on{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.mx-art img{transition:none}}
+
+.heroart{display:block;width:100%;max-width:470px;height:auto}
+/* fills the foot of the picker column, and catches the people whose document
+   is not one of the eight */
+.mx-f{margin-top:auto;padding:18px 20px;border-top:1px solid var(--rule);background:var(--paper-2)}
+.mx-f p{margin:0 0 6px;font-size:.84rem;color:var(--grey);line-height:1.45}
+.mx-f a{font-size:.88rem;font-weight:700;color:var(--red)}
+.mx-f a:hover{text-decoration:underline}

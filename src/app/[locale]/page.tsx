@@ -45,7 +45,12 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             <span className="block accent-type italic">{d.hero.h1b}</span>
           </h1>
           <div className="hair-t grid gap-8 pt-8 lg:grid-cols-[1.1fr_0.9fr]">
-            <p className="measure text-[1.05rem] leading-relaxed text-[var(--fg-dim)]">{d.hero.sub}</p>
+            <div>
+              <p className="measure text-[1.05rem] leading-relaxed text-[var(--fg-dim)]">{d.hero.sub}</p>
+              {/* The whole proposition in one picture: a two year silence,
+                  then a fifteen day clock. */}
+              <img src="/art/hero.svg" alt="" aria-hidden className="heroart mt-8" />
+            </div>
             <div className="flex flex-col items-start gap-5">
               <div className="flex flex-wrap gap-2.5">
                 <Cta href={`/${locale}/deadline-checker`}>{d.cta.primary}</Cta>

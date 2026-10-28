@@ -17,6 +17,7 @@ const COPY = {
     send: "Send us the document",
     clockOn: "A clock is running",
     clockOff: "No immediate deadline",
+    footNote: "Nothing here matches what you are holding?",
   },
   fr: {
     eyebrow: "Étape un, avant toute chose",
@@ -29,6 +30,7 @@ const COPY = {
     send: "Envoyez-nous le document",
     clockOn: "Un délai court",
     clockOff: "Pas de délai immédiat",
+    footNote: "Rien ici ne correspond à votre document ?",
   },
 } as const;
 
@@ -64,9 +66,21 @@ export default function ProblemMatcher({ locale }: { locale: string }) {
                 </button>
               ))}
             </div>
+            <div className="mx-f">
+              <p>{t.footNote}</p>
+              <Link href={`/${locale}/contact`}>{t.send} &rarr;</Link>
+            </div>
           </div>
 
           <div className="mx-r" role="tabpanel" aria-live="polite">
+            {/* The illustration swaps with the case, so picking one visibly
+                changes the page rather than only the words. */}
+            <div className="mx-art">
+              {cases.map((x, n) => (
+                <img key={x.art} src={`/art/m-${x.art}.svg`} alt=""
+                  className={n === i ? "on" : undefined} aria-hidden loading="lazy" />
+              ))}
+            </div>
             <span className={`dl${c.urgent ? "" : " ok"}`}>
               {c.urgent ? <AlertTriangle aria-hidden style={{ width: 17, height: 17 }} />
                         : <CheckCircle2 aria-hidden style={{ width: 17, height: 17 }} />}
